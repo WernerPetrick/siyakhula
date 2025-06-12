@@ -43,7 +43,7 @@ function HowItWorks() {
             <div className="step-card__number">{step.number}</div>
             
             <div className="step-card__icon" style={{ backgroundColor: step.color }}>
-              <img src={step.icon} alt="" />
+              <img src={step.icon} alt={step.title} />
             </div>
             
             <h3 className="step-card__title">{step.title}</h3>

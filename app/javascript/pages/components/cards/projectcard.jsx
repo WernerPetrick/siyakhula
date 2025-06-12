@@ -2,7 +2,7 @@ import "../../styles/projectcard.css"
 import "../../styles/buttons.css";
 
 function ProjectCard({ image, title, description, funded, goal, backers, daysLeft, category }) {
-  const progressPercentage = (funded / goal) * 100;
+  const progressPercentage = goal ? (funded / goal) * 100 : 0;
   
   return (
     <div className="project-card">
