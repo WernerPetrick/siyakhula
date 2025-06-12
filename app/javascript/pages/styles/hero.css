@@ -1,0 +1,38 @@
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  width: 35%;
+  text-align: center;
+}
+
+.hero h1 span{
+    background-image: linear-gradient(to right, oklch(0.627 0.194 149.214) 0%, oklch(0.795 0.184 86.047) 50%, oklch(0.637 0.237 25.331) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p{
+  font-size: 1.5rem;
+  width: 35%;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: rgb(104, 101, 101);
+}
+
+.hero-buttons{
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-buttons button{
+  font-size: 1.3rem;
+}
