@@ -1,0 +1,140 @@
+.how-it-works {
+  padding: 80px 20px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.how-it-works__header {
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+.how-it-works__header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.how-it-works__header p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.how-it-works__steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .how-it-works__steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.step-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.step-card__number {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: #e9ecef;
+  color: #666;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.step-card__icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-card__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.step-card__description {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.step-card__connector {
+  position: absolute;
+  top: 50%;
+  right: -2rem;
+  width: 4rem;
+  height: 2px;
+  background: linear-gradient(90deg, #e9ecef, transparent);
+  transform: translateY(-50%);
+  display: none;
+}
+
+.how-it-works__cta p{
+  font-size: 1.3rem;
+  color: rgb(104, 101, 101);
+  margin-bottom: 1rem;
+}
+
+.how-it-works__cta-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .step-card__connector {
+    display: block;
+  }
+  
+  .step-card:last-child .step-card__connector {
+    display: none;
+  }
+}
+
+/* Background decorative elements */
+.how-it-works::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(40, 167, 69, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(220, 53, 69, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
